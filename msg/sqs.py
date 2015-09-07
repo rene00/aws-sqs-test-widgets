@@ -97,6 +97,8 @@ class SQS():
             return self.delete_msg(queue, msg)
         else:
             print("Message Failed, setting visibility_timeout; "
-                  "visibility_timeout={0}, msg={1.id}".format(
-                      visibility_timeout, msg))
+                  "visibility_timeout={0}, msg={1.id}, receive_count={2}, "
+                  "receive_count_limit={3}".format(visibility_timeout, msg,
+                                                   receive_count,
+                                                   receive_count_limit))
             return msg.change_visibility(visibility_timeout)
