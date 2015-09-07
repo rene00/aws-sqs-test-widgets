@@ -3,13 +3,13 @@ AWS SQS Test Widgets
 
 This is a proof of concept which consists of
 
- -  A [producer](widget_request.py) which is tasked with submitting new
+ -  A [producer](widget_producer.py) which is tasked with submitting new
     requests that create widgets.
 
- - A [consumer](widget_response.py) which takes the new request and
+ - A [consumer](widget_consumer.py) which takes the new request and
     POSTs it to a widget maker web app.
 
- - A [widget maker web app](widget_marker.py) which takes the POST
+ - A [widget maker web app](widget_maker.py) which takes the POST
    request, validates the request and creates the widget.
 
 
